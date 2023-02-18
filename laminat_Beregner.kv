@@ -1,0 +1,51 @@
+<MyW>:
+    velg_enhet: VE
+    lengde_rom: LR
+    lengde_laminat: LL
+    bredde_rom: BR
+    bredde_laminat: BL
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Velg_enhet: "
+
+            TextInput:
+                id: VE
+                multiline:False
+            
+            Label:
+                text: "Lengde_rom: "
+
+            TextInput:
+                id: LR
+                multiline:False
+            
+            Label:
+                text: "Lengde_laminat: "
+
+            TextInput:
+                id: LL
+                multiline:False
+            
+            Label:
+                text: "Bredde_rom: "
+
+            TextInput:
+                id: BR
+                multiline:False
+            
+            Label:
+                text: "Bredde_laminat: "
+
+            TextInput:
+                id: BL
+                multiline:False
+        Button:
+            text: "Beregn"
+            on_press: root.btn()
