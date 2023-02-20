@@ -9,6 +9,10 @@ class MyW(Widget):
     bredde_rom = ObjectProperty(None)
     bredde_laminat = ObjectProperty(None)
 
+
+    def spinner_clicked(self, value):
+        self.ids.VE.text = value
+
     def btn(self):
         print("Beregner....")
 

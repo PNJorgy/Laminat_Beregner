@@ -9,43 +9,83 @@
         cols:1
         size: root.width, root.height
 
-        GridLayout:
-            cols:2
-
-            Label:
-                text: "Velg_enhet: "
-
-            TextInput:
-                id: VE
-                multiline:False
+        Spinner:
+            id: VE
             
+            text: "mm"
+            values: ["mm", "cm", "m"]
+            on_text: root.spinner_clicked(VE.text)
+
+        GridLayout:
+            cols:3
+
             Label:
                 text: "Lengde_rom: "
 
             TextInput:
                 id: LR
+                halign: 'left'
+                padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
                 multiline:False
+            
+            Label:
+                text: VE.text
+                text_size: self.size
+                size_hint: (1,1)
+                halign: "left"
+                valign: "middle"
+                
             
             Label:
                 text: "Lengde_laminat: "
 
             TextInput:
                 id: LL
+                halign: 'left'
+                padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
                 multiline:False
+            
+            Label:
+                text: VE.text
+                text_size: self.size
+                size_hint: (1,1)
+                halign: "left"
+                valign: "middle"
+                
             
             Label:
                 text: "Bredde_rom: "
 
             TextInput:
                 id: BR
+                halign: 'left'
+                padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
                 multiline:False
+            
+            Label:
+                text: VE.text
+                text_size: self.size
+                size_hint: (1,1)
+                halign: "left"
+                valign: "middle"
+                
             
             Label:
                 text: "Bredde_laminat: "
 
             TextInput:
                 id: BL
+                halign: 'left'
+                padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
                 multiline:False
+            
+            Label:
+                text: VE.text
+                text_size: self.size
+                size_hint: (1,1)
+                halign: "left"
+                valign: "middle"
+                
         Button:
             text: "Beregn"
             on_press: root.btn()
