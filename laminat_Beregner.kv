@@ -6,21 +6,25 @@
     bredde_laminat: BL
 
     GridLayout:
-        cols:1
+        cols:2
         size: root.width, root.height
+
+        Label:
+            text: "velg enhet"
 
         Spinner:
             id: VE
-            
+
             text: "mm"
             values: ["mm", "cm", "m"]
             on_text: root.spinner_clicked(VE.text)
+
 
         GridLayout:
             cols:3
 
             Label:
-                text: "Lengde_rom: "
+                text: "Lengde rom: "
 
             TextInput:
                 id: LR
@@ -38,7 +42,7 @@
             
 
             Label:
-                text: "Bredde_rom: "
+                text: "Bredde rom: "
 
             TextInput:
                 id: BR
@@ -56,7 +60,7 @@
                 
             
             Label:
-                text: "Lengde_laminat: "
+                text: "Lengde laminat: "
 
             TextInput:
                 id: LL
@@ -75,7 +79,7 @@
                 
             
             Label:
-                text: "Bredde_laminat: "
+                text: "Bredde laminat: "
 
             TextInput:
                 id: BL
