@@ -1,6 +1,7 @@
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
+from kivy.lang import Builder
 
 class MyW(Widget):
     velg_enhet = ObjectProperty(None)
@@ -16,7 +17,7 @@ class MyW(Widget):
     def btn(self):
         print("Beregner....")
 
-
+kv = Builder.load_file('laminat_Beregner.kv')
 class Laminat_BeregnerApp(App):
      def build(self):
         return MyW()

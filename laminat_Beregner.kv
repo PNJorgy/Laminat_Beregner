@@ -6,7 +6,7 @@
     bredde_laminat: BL
 
     GridLayout:
-        cols:2
+        cols:1
         size: root.width, root.height
 
         Label:
@@ -28,6 +28,7 @@
 
             TextInput:
                 id: LR
+                hint_text: 'Skriv Inn Lengden På Rommet'
                 halign: 'left'
                 padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
                 multiline:False
@@ -46,6 +47,7 @@
 
             TextInput:
                 id: BR
+                hint_text: 'Skriv Inn Bredden På Rommet'
                 halign: 'left'
                 padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
                 multiline:False
@@ -64,6 +66,7 @@
 
             TextInput:
                 id: LL
+                hint_text: 'Skriv Inn Lengden På Laminaten'
                 halign: 'left'
                 padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
                 multiline:False
@@ -83,6 +86,7 @@
 
             TextInput:
                 id: BL
+                hint_text: 'Skriv Inn Bredden På Laminaten'
                 halign: 'left'
                 padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
                 multiline:False
