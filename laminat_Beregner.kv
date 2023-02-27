@@ -9,13 +9,10 @@
         cols:1
         size: root.width, root.height
 
-        Label:
-            text: "velg enhet"
-
         Spinner:
             id: VE
 
-            text: "mm"
+
             values: ["mm", "cm", "m"]
             on_text: root.spinner_clicked(VE.text)
 
@@ -24,13 +21,13 @@
             cols:3
 
             Label:
-                text: "Lengde rom: "
+                text: "Lengde Rom: "
 
             TextInput:
                 id: LR
-                hint_text: 'Skriv Inn Lengden På Rommet'
+                hint_text: 'Lengden På Rommet'
                 halign: 'left'
-                padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+                padding: [6,15,6,6]
                 multiline:False
                 input_filter: 'float'
             
@@ -43,13 +40,13 @@
             
 
             Label:
-                text: "Bredde rom: "
+                text: "Bredde Rom: "
 
             TextInput:
                 id: BR
-                hint_text: 'Skriv Inn Bredden På Rommet'
+                hint_text: 'Bredden På Rommet'
                 halign: 'left'
-                padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+                padding: [6,15,6,6]
                 multiline:False
                 input_filter: 'float'
             
@@ -62,13 +59,13 @@
                 
             
             Label:
-                text: "Lengde laminat: "
+                text: "Lengde Laminat: "
 
             TextInput:
                 id: LL
-                hint_text: 'Skriv Inn Lengden På Laminaten'
+                hint_text: 'Lengden På Laminaten'
                 halign: 'left'
-                padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+                padding: [6,15,6,6]
                 multiline:False
                 input_filter: 'float'
             
@@ -82,13 +79,13 @@
                 
             
             Label:
-                text: "Bredde laminat: "
+                text: "Bredde Laminat: "
 
             TextInput:
                 id: BL
-                hint_text: 'Skriv Inn Bredden På Laminaten'
+                hint_text: 'Bredden På Laminaten'
                 halign: 'left'
-                padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+                padding: [6,15,6,6]
                 multiline:False
                 input_filter: 'float'
             
