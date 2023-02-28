@@ -29,9 +29,11 @@ class WindowManager(ScreenManager):
     pass
 
 kv = Builder.load_file('laminat_Beregner.kv')
+
 class Laminat_BeregnerApp(App):
      def build(self):
         self.title = "EmberFiles - Laminat Beregner"
+        self.icon = 'python2.5.ico'
         return kv
 
 if __name__ == "__main__":
