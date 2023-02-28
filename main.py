@@ -1,26 +1,38 @@
 from kivy.app import App
-from kivy.uix.widget import Widget
+from kivymd.app import App
+from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 
-class MyW(Widget):
-    velg_enhet = ObjectProperty(None)
-    lengde_rom = ObjectProperty(None)
-    lengde_laminat = ObjectProperty(None)
-    bredde_rom = ObjectProperty(None)
-    bredde_laminat = ObjectProperty(None)
 
 
-    def spinner_clicked(self, value):
-        self.ids.VE.text = value
+class MenuScreen(Screen):
+    pass
 
-    def btn(self):
-        print("Beregner....")
+class LaminatBeregner(Screen):
+    pass
+    # Denne skal i kv filen
+    #velg_enhet: VE
+    #lengde_rom: LR
+    #lengde_laminat: LL
+    #bredde_rom: BR
+    #bredde_laminat: BL
+    #
+    #Disse skal ligge her
+    #velg_enhet = ObjectProperty(None)
+    #lengde_rom = ObjectProperty(None)
+    #lengde_laminat = ObjectProperty(None)
+    #bredde_rom = ObjectProperty(None)
+    #bredde_laminat = ObjectProperty(None)
+
+class WindowManager(ScreenManager):
+    pass
 
 kv = Builder.load_file('laminat_Beregner.kv')
 class Laminat_BeregnerApp(App):
      def build(self):
-        return MyW()
+        self.title = "EmberFiles - Laminat Beregner"
+        return kv
 
 if __name__ == "__main__":
     Laminat_BeregnerApp().run()
