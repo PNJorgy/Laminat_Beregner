@@ -1,4 +1,4 @@
-WindowManager:
+<WindowManager>:
     MenuScreen:
     LaminatBeregner:
 
@@ -7,15 +7,24 @@ WindowManager:
 <MenuScreen>:
     name: 'menu'
 
-    FloatLayout:
+    MDFloatLayout:
         size: root.width, root.height
+        
 
 
-        Label:
+        MDLabel:
             font_name: 'Font/consolaz.ttf'
             font_size: '20sp'
             text: "Welcome To An EmberFiles Product" 
-            pos_hint: {"y": .45}
+            pos_hint: {"x": .30, "y": .45}
+        
+        MDRectangleFlatButton:
+            text_size: self.size
+            padding: ["20dp", "10dp", "16dp", "10dp"]
+            line_color: "red"
+            text_color: "white"
+            text: "Laminat/Gulv Beregner"
+            pos_hint: {"x": .1, "y": .7}
 
 <LaminatBeregner>:
     name: 'main'

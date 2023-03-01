@@ -1,7 +1,6 @@
-from kivy.app import App
-from kivymd.app import App
+#from kivy.app import App
+from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 
 
@@ -28,13 +27,15 @@ class LaminatBeregner(Screen):
 class WindowManager(ScreenManager):
     pass
 
-kv = Builder.load_file('laminat_Beregner.kv')
 
-class Laminat_BeregnerApp(App):
+
+class Laminat_BeregnerApp(MDApp):
      def build(self):
         self.title = "EmberFiles - Laminat Beregner"
         self.icon = 'icon/EmberFiles_Icon.png'
-        return kv
+        self.theme_cls.theme_style = 'Dark'
+        Builder.load_file('laminat_Beregner.kv')
+        return WindowManager()
 
 if __name__ == "__main__":
     Laminat_BeregnerApp().run()
