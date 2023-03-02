@@ -2,7 +2,7 @@
     MenuScreen:
     LaminatBeregner:
 
-
+<TooltipMDRectangleFlatIconButton@MDRectangleFlatIconButton+MDTooltip>
 
 <MenuScreen>:
     name: 'menu'
@@ -18,9 +18,15 @@
             text: "Welcome To An EmberFiles Product" 
             pos_hint: {"x": .30, "y": .45}
         
-        MDRectangleFlatButton:
+        TooltipMDRectangleFlatIconButton:
+            icon: 'icon/LB.png'
+            icon_size: 30
+            tooltip_text: "hey ho, let's go!"
+            tooltip_bg_color: 173,173,173,0.50
+            tooltip_text_color: 0,0,0,1
             text_size: self.size
-            padding: ["20dp", "10dp", "16dp", "10dp"]
+            padding: ["80dp", "10dp", "80dp", "10dp"]
+            halign: 'right'
             line_color: "red"
             text_color: "white"
             text: "Laminat/Gulv Beregner"
