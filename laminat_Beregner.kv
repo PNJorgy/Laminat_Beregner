@@ -2,7 +2,7 @@
     MenuScreen:
     LaminatBeregner:
 
-<TooltipMDRectangleFlatIconButton@MDRectangleFlatIconButton+MDTooltip>
+<TooltipMDRoundFlatIconButton@MDRectangleFlatIconButton+MDTooltip>
 
 <MenuScreen>:
     name: 'menu'
@@ -18,19 +18,19 @@
             text: "Welcome To An EmberFiles Product" 
             pos_hint: {"x": .30, "y": .45}
         
-        TooltipMDRectangleFlatIconButton:
-            icon: 'icon/LB.png'
-            icon_size: 30
+        TooltipMDRoundFlatIconButton:
+            #Test Custom button? søk: can't move text in button kivymd
+            padding: ['80dp','10dp']
+            halign: 'right'
+            icon: 'icon/LB2.png'
+            icon_size: 64
             tooltip_text: "hey ho, let's go!"
             tooltip_bg_color: 173,173,173,0.50
             tooltip_text_color: 0,0,0,1
-            text_size: self.size
-            padding: ["80dp", "10dp", "80dp", "10dp"]
-            halign: 'right'
             line_color: "red"
             text_color: "white"
             text: "Laminat/Gulv Beregner"
-            pos_hint: {"x": .1, "y": .7}
+            pos_hint: {"x": .05, "y": .7}
 
 <LaminatBeregner>:
     name: 'main'
