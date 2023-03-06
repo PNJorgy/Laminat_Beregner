@@ -2,12 +2,6 @@
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang import Builder
-from kivymd.uix.tooltip import MDTooltip
-from kivymd.uix.button import MDRectangleFlatIconButton
-
-
-class TooltipMDRectangleFlatIconButton(MDTooltip,MDRectangleFlatIconButton):
-    pass
 
 class MenuScreen(Screen):
     pass
